@@ -15,8 +15,8 @@ public class Solutionslack {
 
             switch (operation) {
                 case "TARUH":
-                    int X = scanner.nextInt();
-                    stack.push(X);
+                    int taruh = scanner.nextInt();
+                    stack.push(taruh);
                     break;
                 case "AMBIL":
                     if (stack.isEmpty()) {
@@ -29,11 +29,11 @@ public class Solutionslack {
                     if (stack.isEmpty()) {
                         System.out.println("stack kosong");
                     } else {
-                        StringBuilder output = new StringBuilder();
-                        for (int num : stack) {
-                            output.append(num + ", ");
+                        StringBuilder hasil = new StringBuilder();
+                        for (int angka : stack) {
+                            hasil.append(angka + ", ");
                         }
-                        System.out.println(output.substring(0, output.length() - 2));
+                        System.out.println(hasil.substring(0, hasil.length() - 2));
                     }
                     break;
             }
