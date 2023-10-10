@@ -13,11 +13,11 @@ public class pulkam {
         // Menghitung frekuensi kata dalam kalimat
         for (String kata : kataKata) {
             boolean kataDitemukan = false;
-            for (String[] entry : frekKata) {
-                if (entry[0].equals(kata)) {
+            for (String[] hitung : frekKata) {
+                if (hitung[0].equals(kata)) {
                     // Jika kata sudah ada dalam LinkedList, tambahkan 1 ke frekuensinya
-                    int frekuensi = Integer.parseInt(entry[1]) + 1;
-                    entry[1] = Integer.toString(frekuensi);
+                    int frekuensi = Integer.parseInt(hitung[1]) + 1;
+                    hitung[1] = Integer.toString(frekuensi);
                     kataDitemukan = true;
                     break;
                 }
@@ -25,14 +25,14 @@ public class pulkam {
 
             if (!kataDitemukan) {
                 // Jika kata belum ada dalam LinkedList, tambahkan kata baru dengan frekuensi 1
-                String[] entry = { kata, "1" };
-                frekKata.add(entry);
+                String[] kataa = { kata, "1" };
+                frekKata.add(kataa);
             }
         }
 
         // Menampilkan hasil
-        for (String[] entry : frekKata) {
-            System.out.println(entry[0] + " = " + entry[1]);
+        for (String[] kataa : frekKata) {
+            System.out.println(kataa[0] + " = " + kataa[1]);
         }
     }
 }
